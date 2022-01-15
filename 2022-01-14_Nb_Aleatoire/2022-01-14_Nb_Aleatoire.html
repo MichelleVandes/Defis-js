@@ -1,0 +1,34 @@
+
+<!--
+  génère un chiffre aléatoire entre 0 et 100 par exemple
+il y a un input dans le quel vous faite une proposition. exemple 35
+Si le chiffre choisi par la machine est inférieur un message affiche : "C'est moins"
+et inversement : "C'est plus"
+Si le chiffre est égale, la machine affiche : "C'est gagné"
+vous rajouter également un bouton RESET pour relancer une partie
+-->  
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Aleatoire</title>
+      <script src="main.js" defer></script>
+  </head>
+  <body>
+  
+       <h1>Quel est le bon nombre ????  de 0 à 100</h1>
+
+       <p>
+Génération de votre nombre :
+<button type="button" onclick="GenereAlea();">Nouveau Nombre</button>
+<br/>
+<br/>
+Votre Proposition :
+<input type="number"  step="1" min="0" max="100" id="Nb_Propose">
+<button type="button" onclick="VerifNombre();">GO</button>
+<br/>
+<span id="libelle"></span>
+
+</p>
+  </body>
+</html>
