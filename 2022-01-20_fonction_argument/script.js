@@ -15,15 +15,13 @@ function queldiviseur(nbr) {
 
   for (let diviseur = nombre; diviseur > 0; diviseur--) {
     reste = nombre % diviseur;
-    console.log(reste, diviseur); 
+   
     if (reste == 0) {
       masolution += diviseur + ", ";
     }
   }
   let texte_soluce = "Voici les nombres par lequel:" +  nbr + " est divisible " + masolution;
-  console.log(
-    "Voici les nombres par lequel:" + nbr + " est divisible " + masolution
-  ); 
 
   soluce1.innerHTML = texte_soluce
 }
+num % incre
