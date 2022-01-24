@@ -1,11 +1,18 @@
 div {
-    padding: 50px;
-    margin: 50px;
+     display: block;
+    padding:  10 px;
+    margin: 10px;
     background: burlywood;
     line-height: 1.4;
     display: block;
+   
 }
 
-.reduc80{
-    height: 80%;;
+.inactive {
+
+   display: none;
+}
+.active{
+    width: 60%;;
+   display: flex;
 }
