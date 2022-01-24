@@ -3,6 +3,7 @@ div {
     margin: 50px;
     background: burlywood;
     line-height: 1.4;
+    display: block;
 }
 
 .reduc80{
