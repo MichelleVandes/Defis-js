@@ -1,18 +1,17 @@
-div {
-     display: block;
+.carousel {
+    display: inline-block;
     padding:  10 px;
     margin: 10px;
     background: burlywood;
     line-height: 1.4;
-    display: block;
-   
 }
 
 .inactive {
-
+   width: 60%;;
    display: none;
+   
 }
 .active{
     width: 60%;;
-   display: flex;
+   display: block;
 }
