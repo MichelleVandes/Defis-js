@@ -11,6 +11,14 @@
    display: none;
    
 }
+
+.est_visible {
+visibility: visible;
+}
+.est_invisible {
+visibility:hidden;
+}
+
 .active{
     width: 60%;;
    display: block;
