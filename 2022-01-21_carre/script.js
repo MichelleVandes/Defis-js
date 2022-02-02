@@ -7,10 +7,10 @@ function carre() {
 
   for (ii = 0; ii < 11 ; ii++) 
     {
-     
-        //  table_resultat[ii]  = ii * ii;
-    table_resultat.push(ii*ii);
-         };
+      //  table_resultat[ii]  = ii * ii;
+      // ** L'opérateur d'exponentiation. peut remplacer inci ii * ii 
+      table_resultat.push(ii * ii);
+    };
 
         console.log(table_resultat);
  };
