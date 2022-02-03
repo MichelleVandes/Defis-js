@@ -4,11 +4,13 @@ var mon_Fichier = new XMLHttpRequest();
 mon_Fichier.open("GET", "test.json");
 mon_Fichier.onreadystatechange = function () {
   if (mon_Fichier.readyState === 4) {
-    // alert("top1");
+  
     mon_fic = mon_Fichier.responseText;
-    alert(mon_fic);
-    let madonnee = mon_fic["h1"];
-    alert(madonnee);
+    alert(typeof mon_fic);
+    let madonnee = JSON.parse(mon_fic);
+   
+     alert(madonnee.h1);
+
   }
 };
 mon_Fichier.send();
