@@ -1,22 +1,39 @@
-let mon_fic, ma_donnee;
+let mon_fic, mon_fic_propose, ma_donnee;
 
-var mon_Fichier = new XMLHttpRequest();
-mon_Fichier.open("GET", "test.json");
-mon_Fichier.onreadystatechange = function () {
-  if (mon_Fichier.readyState === 4) {
-  
-    mon_fic = mon_Fichier.responseText;
-    alert(typeof mon_fic);
-    let madonnee = JSON.parse(mon_fic);
-   
-     alert(madonnee.h1);
 
-  }
-};
-mon_Fichier.send();
+// Fichier json par défaut, à l'initialisation de l'écran
+ console.log(mon_fic);
+if (mon_fic == undefined) {
+  mon_fic = "FR.json";
+  console.log("top 1");
 
-// fetch("test.json").then(function (response) {
-//   response.text().then(function (text) {
-//     poemDisplay.textContent = text;
-//   });
-// });
+  remplir_zone(mon_fic);
+}
+
+// Changement de Langue
+function chgt() {
+  remplir_zone(mon_fic_propose);
+}
+
+// Remplissage des zones de l'écran
+function remplir_zone(mon_fic) {
+console.log(mon_fic);
+
+fetch(mon_fic).then(function (response) {
+  response.json().then(function (data) {
+    console.log(data.h1);
+
+    ma_donnee = document.getElementById("titre_h1");
+    ma_donnee.innerHTML = data.h1;
+
+    ma_donnee = document.getElementById("titre_h2");
+    ma_donnee.innerHTML = data.h2;
+
+    ma_donnee = document.getElementById("Lg_propose");
+    ma_donnee.innerHTML = data.Lg_propose;
+
+    ma_donnee = document.getElementById("Lg_propose");
+    mon_fic_propose = data.Fic_Json_propose;
+  });
+});
+}
